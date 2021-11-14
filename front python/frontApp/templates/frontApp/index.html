@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="{% static 'frontApp/icon.ico' %}" />
+        
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700%display=swap" rel="stylesheet"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="{% static 'frontApp/style.css' %}" />
+        <title>WIKI BUSCADOR</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img               
+                src="https://pbs.twimg.com/profile_images/1270181086744674305/wYabbcSq_400x400.jpg"
+                class="header__image"           
+                />
+
+                
+                <div class="buscador">
+                    <input
+                        id="entrada"
+                        aria-label="Qué desea buscar?"
+                        type="text"                       
+                        placeholder="Qué desea buscar?"                        
+                        required
+                    />
+                    
+                    <button id="boton" type="button" class="fas fa-search icon" aria-label="search">
+                        <!-- inline SVG search icon -->
+                        
+                    </button>
+                </div>
+            </header>
+        </div>
+
+        <div class="results">
+            <p id="error" class="results__error"></p>
+            <div id="results" class="results__items"></div>
+        </div>
+        
+        <script src="{% static 'frontApp/script.js' %}"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+        
+    </body>   
+    
+</html>
